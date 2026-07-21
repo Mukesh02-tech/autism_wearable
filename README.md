@@ -1,17 +1,19 @@
-# 🧩 AutiGuard – Smart Wearable Safety System for Children with Autism
+# 🧩 Smart Wearable Safety System for Children with Autism
 
-AutiGuard is an IoT-based wearable safety device developed to assist children with Autism Spectrum Disorder (ASD). The system continuously monitors the child's health and location while providing emergency communication features for parents and caregivers.
+A smart IoT-based wearable device designed to enhance the safety and well-being of children with Autism Spectrum Disorder (ASD). The system continuously monitors the child's health and location while providing emergency communication features for parents and caregivers.
 
-The wearable integrates multiple sensors to monitor heart rate, blood oxygen level, body movement, and geographical location. In emergency situations, the device automatically transmits the child's live location to guardians, enabling quick assistance and improving overall safety.
+The wearable integrates physiological sensors, motion detection, GPS tracking, and GSM communication to provide real-time monitoring and emergency assistance. In emergency situations, the system automatically shares the child's live location with caregivers, enabling faster response and improved safety.
+
+🌐 **Live Web Application:** https://testing-aegis.onrender.com
 
 ---
 
 # 📌 Project Objectives
 
-- Monitor the child's vital signs in real time.
-- Track the child's location using GPS.
-- Detect abnormal movement or emergency situations.
-- Provide instant location sharing with caregivers.
+- Monitor the child's health parameters in real time.
+- Track the child's live location using GPS.
+- Detect abnormal movements and emergency situations.
+- Send emergency location updates to caregivers.
 - Improve the safety and independence of autistic children.
 
 ---
@@ -20,16 +22,17 @@ The wearable integrates multiple sensors to monitor heart rate, blood oxygen lev
 
 - ❤️ Real-time Heart Rate Monitoring
 - 🩸 Blood Oxygen (SpO₂) Monitoring
-- 📍 GPS Live Location Tracking
+- 📍 Live GPS Tracking
 - 🚶 Motion Detection using Accelerometer
-- 📡 GSM Communication for Emergency Alerts
-- 📱 IoT-based Remote Monitoring
-- 🔋 Low Power Wearable Design
+- 📡 GSM-based Emergency Alerts
+- 🌐 Web-based Monitoring Dashboard
+- 📱 Remote Health Monitoring
 - 🚨 Emergency Location Sharing
+- 🔋 Portable Wearable Design
 
 ---
 
-# 🛠 Hardware Components
+# 🛠️ Hardware Components
 
 - ESP32 Development Board
 - MAX30100 Pulse Oximeter Sensor
@@ -37,40 +40,51 @@ The wearable integrates multiple sensors to monitor heart rate, blood oxygen lev
 - NEO-6M GPS Module
 - SIM800L GSM Module
 - Rechargeable Li-ion Battery
-- OLED Display (Optional)
-- Push Button for Emergency Trigger
+- Push Button (Emergency Trigger)
 
 ---
 
-# 💻 Software Used
+# 💻 Software & Technologies
 
+### Embedded Development
 - Arduino IDE
 - Embedded C/C++
-- TinyGPS++ Library
-- Wire Library
-- WiFi Library
+
+### Web Development
+- HTML
+- CSS
+- JavaScript
+
+### Backend
+- Python
+- Flask
+
+### Database
+- SQLite
 
 ---
 
-# ⚙️ Working Principle
+# ⚙️ System Workflow
 
-1. ESP32 continuously collects sensor data.
-2. MAX30100 measures heart rate and blood oxygen level.
-3. MPU6050 monitors body movement and detects unusual motion.
-4. GPS module acquires the child's live location.
-5. In case of emergency, the SIM800L module sends the live location to parents or caregivers.
-6. Parents can monitor the child's condition remotely.
+1. The ESP32 continuously reads sensor data.
+2. The MAX30100 measures heart rate and blood oxygen level.
+3. The MPU6050 detects body movement and unusual activity.
+4. The GPS module obtains the child's live location.
+5. The ESP32 sends sensor and GPS data to the web server.
+6. The web application displays the child's health status and current location.
+7. During emergencies, the system shares the child's location with caregivers through the GSM module.
 
 ---
 
 # 📂 Project Structure
 
 ```
-AutiGuard/
+Autism-Wearable/
 │
 ├── Arduino_Code/
-├── Circuit_Diagram/
+├── Web_Application/
 ├── Images/
+├── Circuit_Diagram/
 ├── Documentation/
 ├── README.md
 └── LICENSE
@@ -78,15 +92,17 @@ AutiGuard/
 
 ---
 
-# 🔧 Hardware Connections
+# 🌐 Web Application
 
-| Component | ESP32 Pin |
-|-----------|-----------|
-| MAX30100 | I2C (SDA, SCL) |
-| MPU6050 | I2C (SDA, SCL) |
-| NEO-6M GPS | UART RX/TX |
-| SIM800L GSM | UART RX/TX |
-| Push Button | GPIO |
+The project includes a web-based monitoring dashboard that enables caregivers to:
+
+- View the child's live GPS location
+- Monitor health parameters
+- Access emergency information
+- Track movement history
+- Manage device information
+
+🔗 **Live Demo:** https://testing-aegis.onrender.com
 
 ---
 
@@ -94,36 +110,36 @@ AutiGuard/
 
 - Autism Care
 - Child Safety Monitoring
-- Special Education Schools
-- Hospitals
+- Smart Healthcare
 - Rehabilitation Centers
-- Elderly Monitoring
-- Personal Healthcare
+- Hospitals
+- Schools for Special Children
+- Personal Healthcare Devices
 
 ---
 
 # ✅ Advantages
 
-- Portable wearable device
-- Real-time health monitoring
-- Live GPS tracking
+- Continuous health monitoring
+- Real-time GPS tracking
 - Emergency communication
+- Lightweight wearable design
+- Easy to use
 - Low-cost implementation
-- Easy to operate
-- Suitable for daily use
+- Remote monitoring capability
 
 ---
 
 # 🚀 Future Enhancements
 
 - AI-based behavior prediction
-- Fall detection algorithm
-- Indoor positioning system
-- Mobile application
+- Fall detection using Machine Learning
+- Mobile application for Android and iOS
 - Cloud database integration
 - Voice assistant support
-- Machine learning for behavioral analysis
 - Wi-Fi and Bluetooth synchronization
+- Geofencing with instant notifications
+- Doctor and caregiver dashboard
 
 ---
 
@@ -132,31 +148,25 @@ AutiGuard/
 - Embedded Systems
 - Internet of Things (IoT)
 - ESP32 Programming
+- Sensor Interfacing
 - GPS Tracking
 - GSM Communication
-- Sensor Interfacing
+- Web Development
+- Flask Backend Development
 - Healthcare Wearable Design
-- Real-Time Monitoring
-- Arduino Programming
 
 ---
 
-# 📸 Project Images
+# 📸 Project Gallery
 
-Add the following images to improve your repository:
+Add images of:
 
-- Device Prototype
+- Hardware Prototype
 - Circuit Diagram
-- Hardware Setup
 - Sensor Connections
-- Working Demonstration
-- Final Wearable Prototype
-
----
-
-# 📈 Project Outcome
-
-This project demonstrates the integration of IoT, embedded systems, and healthcare technologies to develop a smart wearable device that enhances the safety and well-being of children with Autism Spectrum Disorder. The system provides continuous monitoring and emergency communication, making it suitable for real-world assistive healthcare applications.
+- Web Dashboard
+- GPS Tracking Interface
+- Final Wearable Device
 
 ---
 
@@ -174,7 +184,6 @@ Sri Manakula Vinayagar Engineering College
 
 🔗 LinkedIn: https://www.linkedin.com/in/mukeshmuniraj05
 
-🔗 Web_Application Link: https://testing-aegis.onrender.com
 ---
 
 ## ⭐ If you found this project useful, consider giving it a Star!
